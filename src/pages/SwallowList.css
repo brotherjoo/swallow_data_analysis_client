@@ -1,0 +1,61 @@
+/* 전체 리스트 영역에 좌우 여백 주기 */
+.list-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 32px; /* 양옆 padding */
+}
+
+/* 제목 */
+.list-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* 리스트 스타일 */
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 각 항목 */
+.service-item {
+    border-bottom: 1px solid #eee;
+    padding: 16px 8px; /* 항목 내부 padding (좌우 포함) */
+    background-color: #fff;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    transition: background 0.2s ease;
+}
+
+/* 항목 링크 */
+.service-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    padding: 8px 12px;
+}
+
+/* hover 효과 */
+.service-link:hover {
+    color: #007bff;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+/* 왼쪽 텍스트 */
+.service-title {
+    flex: 1;
+}
+
+/* 오른쪽 id */
+.service-id {
+    color: #888;
+    font-size: 16px;
+    margin-left: 12px;
+}

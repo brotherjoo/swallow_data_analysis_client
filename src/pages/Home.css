@@ -1,0 +1,53 @@
+.home-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    gap: 250px  ;
+    flex-wrap: wrap;
+}
+
+.home-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    /* background-color: black; */
+    /* background: transparent; */
+}
+
+.home-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.home-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.home-description {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-text {
+        margin-top: 20px;
+    }
+}
+
+.home-image img {
+    background: transparent; /* ← 혹시 몰라 명시해두기 */
+}

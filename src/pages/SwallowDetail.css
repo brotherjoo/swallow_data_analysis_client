@@ -1,0 +1,42 @@
+.detail-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 세로 중앙 정렬 */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.detail-layout.reverse {
+    flex-direction: row-reverse;
+}
+
+.map-section {
+    position: relative;
+    width: 800px; /* 원하는 너비 */
+    height: 650px; /* 원하는 높이 */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* 크기 줄어드는 것 방지 */
+}
+
+.info-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.detail-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.detail-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
