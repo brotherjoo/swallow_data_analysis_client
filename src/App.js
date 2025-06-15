@@ -11,7 +11,6 @@ import "./css/App.css";
 export default function App() {
     return (
         <div>
-            <HashRouter>
                 <Header />
                 <Routes>
                     <Route path="/" element={<Home />} />
@@ -20,7 +19,6 @@ export default function App() {
                     <Route path="/register" element={<SwallowRegister />} />
                     <Route path="/api" element={<SwallowApi />} />
                 </Routes>
-            </HashRouter>
         </div>
     );
 }
