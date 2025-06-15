@@ -5,8 +5,8 @@ export default function Header() {
     const location = useLocation();
     const menuItems = [
         { name: "Data List", path: "/list" },
-        { name: "Regiser", path: "/service2" },
-        { name: "Api", path: "/service3" },
+        { name: "Regiser", path: "/register" },
+        { name: "Api", path: "/api" },
     ];
 
     return (

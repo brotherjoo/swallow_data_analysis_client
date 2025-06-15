@@ -1,0 +1,64 @@
+.upload-container {
+    height: 100vh; /* 전체 화면 채우기 */
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+.upload-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.upload-title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.upload-input,
+.upload-textarea {
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.upload-textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.upload-file-info {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.upload-button {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.upload-button.active {
+    background-color: #007bff;
+    cursor: pointer;
+}
+
+.upload-button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
