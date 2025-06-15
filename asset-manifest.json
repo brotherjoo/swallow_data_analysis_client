@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/swallow_data_analysis_client/static/css/main.438053f6.css",
+    "main.js": "/swallow_data_analysis_client/static/js/main.fce1900a.js",
+    "static/js/879.c61a489a.chunk.js": "/swallow_data_analysis_client/static/js/879.c61a489a.chunk.js",
+    "index.html": "/swallow_data_analysis_client/index.html",
+    "main.438053f6.css.map": "/swallow_data_analysis_client/static/css/main.438053f6.css.map",
+    "main.fce1900a.js.map": "/swallow_data_analysis_client/static/js/main.fce1900a.js.map",
+    "879.c61a489a.chunk.js.map": "/swallow_data_analysis_client/static/js/879.c61a489a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.438053f6.css",
+    "static/js/main.fce1900a.js"
+  ]
+}
