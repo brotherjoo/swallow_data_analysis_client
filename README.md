@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# 예제 API 문서
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 제비 이동경로 데이터를 수집하는 RESTful API
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 개요
 
-### `npm start`
+이 API는 제비 이동경로 데이터를 손쉽게 제공받을 수 있는 기능을 제공합니다. 요청과 응답은 JSON 형식을 사용합니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> **참고:** 데이터 등록은 보안상의 문제로 인증된 클라이언트에게만 가능하게 제공하고 있습니다. 등록 관련으로는 추후에 안내하겠습니다.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 기본 URL
 
-### `npm run build`
+모든 엔드포인트의 기본 URL은 다음과 같습니다: http://3.35.217.155
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 엔드포인트
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   **GET /find/all**: 모든 제비 이동경로 데이터의 목록을 조회합니다.
+-   **GET /users/:id**: 특정 제목에 해당하는 제비 이동경로 상세 정보를 조회합니다.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 예제 요청
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+제목이 `title`인 데이터를 조회하는 요청 예시:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+GET http://3.35.217.155/find/title
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Headers: Accept: application/json
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 예제 응답
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```json
+{
+  "title": "cn187",
+  "description": "cn187",
+  "swallowResponseList": [
+    {
+      "longitude": 125.69,
+      "latitude": 26.006,
+      "dateTime": "2023-06-08T10:53:48",
+      "temp": 26.9
+    },
+    {
+      "longitude": 126.214,
+      "latitude": 25.105,
+      "dateTime": "2023-06-08T20:18:48",
+      "temp": 26.74
+    },
+    ...
+  ]
+}
+```
