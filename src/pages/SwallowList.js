@@ -33,11 +33,32 @@ export default function SwallowList() {
                     <li key={service.id} className="service-item">
                         <Link to={`/detail/${service.title}`} className="service-link">
                             <span className="service-title">{service.title}</span>
-                            <span className="service-id">#{service.id}</span>
+                            <span className="service-id">#{formatDateString(service.createDateTime)}</span>
                         </Link>
                     </li>
                 ))}
             </ul>
         </div>
     );
+}
+
+function formatDateString(rawDateStr) {
+    if (!rawDateStr) return "날짜 없음";
+    // 마이크로초(6자리) 자르고 앞 3자리만 사용 (Date 객체에서 지원되는 밀리초까지만 유지)
+    const trimmed = rawDateStr.slice(0, 23);
+
+    const date = new Date(trimmed);
+
+    // 옵션 설정
+    const options = {
+        year: "numeric",
+        month: "long", // "6월"처럼 출력됨
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false, // 24시간 형식
+    };
+
+    return date.toLocaleString("ko-KR", options);
 }
